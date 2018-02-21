@@ -17,7 +17,7 @@ namespace IntegrationTestingDemo.Infra
 
         public EmployeesDbContext(string nameOrConnectionString): base(nameOrConnectionString)
         {
-
+            Database.SetInitializer<EmployeesDbContext>(null);
         }
 
         public DbSet<Employee> Employees { get; set; }
