@@ -30,6 +30,7 @@ namespace IntegrationTestingDemo.App
                 Employee employee = new Employee(employeeModel.EmployeeName, employeeModel.DepartmentName
                     , employeeModel.IdNo, employeeModel.BirthDate);
                 _employeeRepository.AddEmployee(employee);
+                _logger.Log($"Employee {employee.Name} Added");
             }
             catch (Exception ex)
             {
@@ -50,7 +51,7 @@ namespace IntegrationTestingDemo.App
                         EmployeeId = c.Id,
                         EmployeeName = c.Name,
                         IdNo = c.IdNo,
-                    }).ToList();
+                    }).OrderBy(c => c.EmployeeName).ToList();
             }
             catch (Exception ex)
             {

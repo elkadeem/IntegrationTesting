@@ -57,11 +57,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EmployeeServiceTesting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IntegrationTestingDemo.App\IntegrationTestingDemo.App.csproj">
+      <Project>{1D07665C-8669-4B23-BED5-70F8ED7A2B6F}</Project>
+      <Name>IntegrationTestingDemo.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegrationTestingDemo.Core\IntegrationTestingDemo.Core.csproj">
+      <Project>{8DD33F43-B10D-4A26-80E4-00EFFFFD2106}</Project>
+      <Name>IntegrationTestingDemo.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegrationTestingDemo.Domain\IntegrationTestingDemo.Domain.csproj">
+      <Project>{7C2E8654-850E-49D8-B0A7-9425A310631F}</Project>
+      <Name>IntegrationTestingDemo.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

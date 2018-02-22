@@ -45,6 +45,8 @@ namespace IntegrationTestingDemo.MVCWebApp.Controllers
                     TempData["Message"] = $"Employee {employeeModel.EmployeeName} is added" ;
                     return RedirectToAction("Index");
                 }
+
+                _logger.Log("dsgsdgdg");
             }
             catch (Exception ex)
             {

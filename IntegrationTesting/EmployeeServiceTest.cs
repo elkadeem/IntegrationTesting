@@ -31,6 +31,7 @@ namespace IntegrationTesting
 
         private static void AddEmployees(EmployeesDbContext employeesDbContext)
         {
+            //Arrange
             employeesDbContext.Employees.AddOrUpdate(c => c.IdNo, new Employee("Ahmed", "Dev", "111", DateTime.Today.AddYears(-30)));
             employeesDbContext.Employees.AddOrUpdate(c => c.IdNo, new Employee("Mohamed", "Dev", "112", DateTime.Today.AddYears(-30)));
             employeesDbContext.Employees.AddOrUpdate(c => c.IdNo, new Employee("Ali", "Dev", "123", DateTime.Today.AddYears(-30)));
@@ -44,8 +45,10 @@ namespace IntegrationTesting
         public void GetEmployee_ReturnAllEmployees()
         {
             var items = _employeeService.GetEmployees();
-            Assert.IsNotNull(items);
-            Assert.IsNotEmpty(items);
+            //Assert.IsNotNull(items);
+            //Assert.IsNotEmpty(items);
+
+            Assert.AreEqual(items[0].EmployeeName, "Ahmed");
         }
     }
 }
